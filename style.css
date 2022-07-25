@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 
+:root {
+    --color-primary: #02eeff;
+    --color-primary-variant: #5ddce5;
+    --color-bg-1: #001517;
+    --color-bg-2: #00282d;
+    --color-bg-3: #012e34;
+    --color-bg-4: #003f47;
+    --color-light: #85afb2;
+    --color-white: #e6e6e6;
+
+    --container-width-lg: 88%;
+    --container-width-md: 92%;
+
+    --transition: all 0.3s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,4 +32,91 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg-3);
+    color: var(--color-light);
+    line-height: 1.8;
+    overflow-x: hidden;
 }
+
+h1,h2 {
+    line-height: 1.2;
+    font-weight: 400;
+
+}
+h1 {
+    font-size: 4rem;
+    color: var(--color-white);
+}
+h2{
+    font-size: 3.5rem;
+}
+a{
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--color-primary);
+}
+.contenter{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+    max-width: 2160px;
+}
+img{
+    display:block;
+    width: 100%;
+    object-fit: cover;
+}
+/* -- ===========naver start=================  */
+nav{
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: var(--color-bg-2);
+    border-bottom: 0.2rem solid var(--color-bg-3);
+    box-shadow: 0 0.2rem 0.7rem rgba( 0 0 0 / 0.3) ;
+}
+
+.nav-contenter{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-primary-variant);
+}
+
+.nav-links{
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-socials{
+    display: flex;
+    gap: 1rem;
+}
+.nav-socials a{
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(var(--color-primary-variant), var(--color-primary));
+    color: var(--color-bg-4);
+    border-radius: 0.5rem;
+    transition: var(--transition);
+}
+.nav-socials a:hover {
+    box-shadow:0 1rem 1rem rgba( 0 0 0 / 0.5) ;
+}
+/* -- ===========naver ends=================  */
